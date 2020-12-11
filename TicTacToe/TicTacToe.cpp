@@ -60,6 +60,7 @@ void playTicTacToe()
             //This is player 1's turn
             std::cout << player1Name << ", it's your turn." << " 1.TopLeft, 2.TopMid, 3.TopRight, " << std::endl << "4.MidLeft, 5.Mid, 6.MidRight, " << std::endl << " 7.BotLeft, 8.BotMid, 9.BotRight";
             std::cin >> player1Choice;
+            system("cls");
             if (player1Choice == 1)
             {
                 grid[0][0] = 1;
@@ -96,6 +97,11 @@ void playTicTacToe()
             {
                 grid[2][2] = 1;
             }
+            else if (player1Choice < 1)
+            {
+                system("cls");
+                std::cout << "You went out of bounds... so your pencil broke this turn." << std::endl;
+            }
             else if (player1Choice > 9)
             {
                 system("cls");
@@ -116,6 +122,7 @@ void playTicTacToe()
             //This is player 2's turn
             std::cout << player2Name << ", it's your turn." << " 1.TopLeft, 2.TopMid, 3.TopRight, " << std::endl << "4.MidLeft, 5.Mid, 6.MidRight, " << std::endl << " 7.BotLeft, 8.BotMid, 9.BotRight";
             std::cin >> player2Choice;
+            system("cls");
             if (player2Choice == 1)
             {
                 grid[0][0] = 2;
@@ -151,6 +158,11 @@ void playTicTacToe()
             else if (player2Choice == 9)
             {
                 grid[2][2] = 2;
+            }
+            else if (player2Choice < 1)
+            {
+                system("cls");
+                std::cout << "You went out of bounds... so your pencil broke this turn." << std::endl;
             }
             else if (player2Choice > 9)
             {
