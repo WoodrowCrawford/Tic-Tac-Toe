@@ -63,39 +63,93 @@ void playTicTacToe()
             system("cls");
             if (player1Choice == 1)
             {
-                grid[0][0] = 1;
+                if (grid[0][0] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[0][0] = 1;
             }
             else if (player1Choice == 2)
             {
-                grid[0][1] = 1;
+                if (grid[0][1] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[0][1] = 1;
             }
             else if (player1Choice == 3)
             {
-                grid[0][2] = 1;
+                if (grid[0][2] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[0][2] = 1;
             }
             else if (player1Turn == 4)
             {
-                grid[1][0] = 1;
+                if (grid[1][0] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[1][0] = 1;
             }
             else if (player1Choice == 5)
             {
-                grid[1][1] = 1;
+                if (grid[1][1] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[1][1] = 1;
             }
             else if (player1Choice == 6)
             {
-                grid[1][2] = 1;
+                if (grid[1][2] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[1][2] = 1;
             }
             else if (player1Choice == 7)
             {
-                grid[2][0] = 1;
+                if (grid[2][0] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[2][0] = 1;
             }
             else if (player1Choice == 8)
             {
-                grid[2][1] = 1;
+                if (grid[2][1] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[2][1] = 1;
             }
             else if (player1Choice == 9)
             {
-                grid[2][2] = 1;
+                if (grid[2][2] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[2][2] = 1;
             }
             else if (player1Choice < 1)
             {
@@ -116,6 +170,45 @@ void playTicTacToe()
                     std::cout << std::endl;
                 }
             }
+
+            //Checks to see if player 1 won
+            if (grid[0][0] == 1 && grid[0][1] == 1 && grid[0][2] == 1)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player1Name << " wins!!";
+               
+            }
+            else if (grid[0][0] == 1 && grid[1][1] == 1 && grid[2][2] == 1)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player1Name << " wins!!";
+            }
+            else if (grid[0][0] == 1 && grid[1][0] == 1 && grid[2][0] == 1)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player1Name << " wins!!";
+            }
+            else if (grid[2][0] == 1 && grid[1][1] == 1 && grid[0][2] == 1)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player1Name << " wins!!";
+            }
+            else if (grid[2][0] == 1 && grid[2][1] == 1 && grid[2][2] == 1)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player1Name << " wins!!";
+            }
+            else if (grid[0][2] == 1 && grid[1][2] == 1 && grid[2][2] == 1)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player1Name << " wins!!";
+            }
            
 
          
@@ -125,39 +218,93 @@ void playTicTacToe()
             system("cls");
             if (player2Choice == 1)
             {
-                grid[0][0] = 2;
+                if (grid[0][0] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[0][0] = 2;
             }
             else if (player2Choice == 2)
             {
-                grid[0][1] = 2;
+                if (grid[0][1] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[0][1] = 2;
             }
             else if (player2Choice == 3)
             {
-                grid[0][2] = 2;
+                if (grid[0][2] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[0][2] = 2;
             }
             else if (player2Choice == 4)
             {
-                grid[1][0] = 2;
+                if (grid[1][0] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[1][0] = 2;
             }
             else if (player2Choice == 5)
             {
-                grid[1][1] = 2;
+                if (grid[1][1] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[1][1] = 2;
             }
             else if (player2Choice == 6)
             {
-                grid[1][2] = 2;
+                if (grid[1][2] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[1][2] = 2;
             }
             else if (player2Choice == 7)
             {
-                grid[2][0] = 2;
+                if (grid[2][0] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[2][0] = 2;
             }
             else if (player2Choice == 8)
             {
-                grid[2][1] = 2;
+                if (grid[2][1] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[2][1] = 2;
             }
             else if (player2Choice == 9)
             {
-                grid[2][2] = 2;
+                if (grid[2][2] != 0)
+                {
+                    std::cout << "This spot is taken ";
+                    system("pause");
+                    system("cls");
+                }
+                else grid[2][2] = 2;
             }
             else if (player2Choice < 1)
             {
@@ -179,8 +326,56 @@ void playTicTacToe()
                 }
                 
             }
+
+            //Checks to see if player 2 won
+            if (grid[0][0] == 2 && grid[0][1] == 2 && grid[0][2] == 2)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player2Name << " wins!!";
+
+            }
+            else if (grid[0][0] == 2 && grid[1][1] == 2 && grid[2][2] == 2)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player2Name << " wins!!";
+            }
+            else if (grid[0][0] == 2 && grid[1][0] == 2 && grid[2][0] == 2)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player2Name << " wins!!";
+            }
+            else if (grid[2][0] == 2 && grid[1][1] == 2 && grid[0][2] == 2)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player2Name << " wins!!";
+            }
+            else if (grid[2][0] == 2 && grid[2][1] == 2 && grid[2][2] == 2)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player2Name << " wins!!";
+            }
+            else if (grid[0][2] == 2 && grid[1][2] == 2 && grid[2][2] == 2)
+            {
+                _gameOver == true;
+                system("pause");
+                std::cout << player2Name << " wins!!";
+            }
         }
 
+
+        if (_gameOver == true)
+        {
+            system("cls");
+            std::cout << "Thanks for playing!!!";
+            system("pause");
+        }
+        
+       
 
 
 
