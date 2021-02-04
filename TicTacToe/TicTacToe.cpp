@@ -1,18 +1,7 @@
 #include <iostream>
 
 
-void printArray()
-{
-    int arrayStuff[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12};
-    int i = 0;
 
-    while (i <= arrayStuff[i])
-    {
-        std::cout << arrayStuff[i++] << std::endl;
-    }
-
-    //system("cls") to clear screen
-}
 
 void playTicTacToe()
 {
@@ -58,7 +47,7 @@ void playTicTacToe()
         while (_gameOver == false)
         {
             //This is player 1's turn
-            std::cout << player1Name << ", it's your turn." << " 1.TopLeft, 2.TopMid, 3.TopRight, " << std::endl << "4.MidLeft, 5.Mid, 6.MidRight, " << std::endl << " 7.BotLeft, 8.BotMid, 9.BotRight";
+            std::cout << player1Name << ", it's your turn." << std::endl << " 1.TopLeft, 2.TopMid, 3.TopRight, " << std::endl << "4.MidLeft, 5.Mid, 6.MidRight, " << std::endl << " 7.BotLeft, 8.BotMid, 9.BotRight";
             std::cin >> player1Choice;
             system("cls");
             if (player1Choice == 1)
@@ -91,7 +80,7 @@ void playTicTacToe()
                 }
                 else grid[0][2] = 1;
             }
-            else if (player1Turn == 4)
+            else if (player1Choice == 4)
             {
                 if (grid[1][0] != 0)
                 {
@@ -161,6 +150,22 @@ void playTicTacToe()
                 system("cls");
                 std::cout << "You went out of bounds... so your pencil broke this turn." << std::endl;
             }
+
+            bool fullBoard = true;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++) {
+                    if (grid[i][j] == 0) {
+                        fullBoard = false;
+                    }
+                }
+            }
+
+            if (fullBoard) {
+                std::cout << "You're both losers. End of story!" << std::endl;
+                break;
+            }
+
             if (_gameOver == false)
             {
                 for (int i = 0; i < 3; i++) {
@@ -177,43 +182,46 @@ void playTicTacToe()
                 _gameOver == true;
                 system("pause");
                 std::cout << player1Name << " wins!!";
-               
+                break;
             }
             else if (grid[0][0] == 1 && grid[1][1] == 1 && grid[2][2] == 1)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player1Name << " wins!!";
+                break;
             }
             else if (grid[0][0] == 1 && grid[1][0] == 1 && grid[2][0] == 1)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player1Name << " wins!!";
+                break;
             }
             else if (grid[2][0] == 1 && grid[1][1] == 1 && grid[0][2] == 1)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player1Name << " wins!!";
+                break;
             }
             else if (grid[2][0] == 1 && grid[2][1] == 1 && grid[2][2] == 1)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player1Name << " wins!!";
+                break;
             }
             else if (grid[0][2] == 1 && grid[1][2] == 1 && grid[2][2] == 1)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player1Name << " wins!!";
+                break;
             }
-           
-
          
             //This is player 2's turn
-            std::cout << player2Name << ", it's your turn." << " 1.TopLeft, 2.TopMid, 3.TopRight, " << std::endl << "4.MidLeft, 5.Mid, 6.MidRight, " << std::endl << " 7.BotLeft, 8.BotMid, 9.BotRight";
+            std::cout << player2Name << ", it's your turn." << std::endl << " 1.TopLeft, 2.TopMid, 3.TopRight, " << std::endl << "4.MidLeft, 5.Mid, 6.MidRight, " << std::endl << " 7.BotLeft, 8.BotMid, 9.BotRight";
             std::cin >> player2Choice;
             system("cls");
             if (player2Choice == 1)
@@ -316,6 +324,22 @@ void playTicTacToe()
                 system("cls");
                 std::cout << "You went out of bounds... so your pencil broke this turn." << std::endl;
             }
+
+            fullBoard = true;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++) {
+                    if (grid[i][j] == 0) {
+                        fullBoard = false;
+                    }
+                }
+            }
+
+            if (fullBoard) {
+                std::cout << "You're both losers. End of story!" << std::endl;
+                return;
+            }
+
             if (_gameOver == false)
             {
                 for (int i = 0; i < 3; i++) {
@@ -333,6 +357,7 @@ void playTicTacToe()
                 _gameOver == true;
                 system("pause");
                 std::cout << player2Name << " wins!!";
+                break;
 
             }
             else if (grid[0][0] == 2 && grid[1][1] == 2 && grid[2][2] == 2)
@@ -340,30 +365,35 @@ void playTicTacToe()
                 _gameOver == true;
                 system("pause");
                 std::cout << player2Name << " wins!!";
+                break;
             }
             else if (grid[0][0] == 2 && grid[1][0] == 2 && grid[2][0] == 2)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player2Name << " wins!!";
+                break;
             }
             else if (grid[2][0] == 2 && grid[1][1] == 2 && grid[0][2] == 2)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player2Name << " wins!!";
+                break;
             }
             else if (grid[2][0] == 2 && grid[2][1] == 2 && grid[2][2] == 2)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player2Name << " wins!!";
+                break;
             }
             else if (grid[0][2] == 2 && grid[1][2] == 2 && grid[2][2] == 2)
             {
                 _gameOver == true;
                 system("pause");
                 std::cout << player2Name << " wins!!";
+                break;
             }
         }
 
